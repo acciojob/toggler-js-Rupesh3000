@@ -1,1 +1,51 @@
-/*  your css code here. If applicable */
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+.toggle-container {
+  margin-top: 20px;
+}
+
+.toggle-container div {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  appearance: none;
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.toggle:checked {
+  background: #4caf50;
+}
+
+.toggle:checked::before {
+    transform: translateX(25px);
+}
+
+label {
+  margin-left: 10px;
+  cursor: pointer;
+}
